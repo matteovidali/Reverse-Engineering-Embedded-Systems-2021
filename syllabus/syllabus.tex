@@ -1,0 +1,325 @@
+\documentclass[12pt,twoside]{article}
+
+\newif\ifsolutions
+\solutionstrue
+
+\usepackage[colorlinks, urlcolor=blue]{hyperref}
+%\usepackage{breakurl}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+% If using minted, must call pdflatex with -shell-escape
+% \usepackage{minted}
+\usepackage{parskip}
+\newcommand{\profs}{Prepared by: Austin Roach}
+\newcommand{\shortsubj}{Reverse-engineering embedded systems}
+\newcommand{\longsubj}{ENGR-E399/599}
+\newcommand{\term}{Spring 2022}
+\newcommand{\organization}{Indiana University}
+\newcommand{\assignmentname}{Syllabus}
+\newcommand{\assignmentdate}{January 13, 2022}
+
+\newlength{\toppush}
+\setlength{\toppush}{2\headheight}
+\addtolength{\toppush}{\headsep}
+
+\newcommand{\htitle}{\noindent\vspace*{-\toppush}\newline\parbox{6.5in}
+{\textit{\longsubj}\hfill\newline
+\organization\hfill\term\newline
+\profs\hfill \assignmentdate\vspace*{-.5ex}\newline
+\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+\begin{center}
+{\Large\bf \assignmentname}\\
+\end{center}}
+
+\newcommand{\handout}{\thispagestyle{empty}
+\markboth{\shortsubj: \assignmentname}{\shortsubj: \assignmentname}
+\pagestyle{myheadings}}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+% Allow breaks at underscores
+\renewcommand\_{\textunderscore\allowbreak}
+
+% Superscript footnote comma separator
+\newcommand{\fnsep}{\textsuperscript{,}}
+
+\begin{document}
+\htitle
+\handout
+\setlength{\parindent}{0pt}
+
+This course provides an introduction to embedded systems reverse engineering.
+Its focus is the practical exploration of the process of reverse engineering
+using tools and techniques relevant to embedded systems. This course will give
+experience with:
+\begin{itemize}
+\item Analyzing embedded systems architectures
+\item Identifying and interacting with debug interfaces and external
+communication interfaces
+\item Extracting information for analysis from nonvolatile memories and
+firmware update files
+\item Disassembling, decompiling, and analyzing executable code for various
+microcontrollers and microprocessors
+\item Emulating firmware
+\item Identifying appropriate points for analysis given a reverse engineering
+goal
+\end{itemize}
+The course will explore a range of embedded systems architectures, from those
+based on 8-bit microcontrollers to those based on microprocessors running
+embedded multitasking operating systems.
+
+\medskip
+
+\hrulefill
+
+\medskip
+
+\section{Instructor}
+
+Austin Roach\\
+ahroach@iu.edu
+
+\section{Schedule}
+
+{\bf Lecture:}
+Thursday 4:55PM-7:25PM, 4012 Luddy Hall\\
+Lectures will be recorded to allow students to view lectures for which they are
+absent and to review lecture content as needed.
+
+{\bf Office hours}:
+Tuesday 7:30PM-8:30PM, 2032 Luddy Hall\\
+
+If students are unable to attend office hours, appointments with the instructor
+on Zoom can be scheduled upon request.
+
+A tentative schedule of lecture topics is:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|}
+\hline
+{\bf Date} & {\bf Topic}\\
+\hline
+{\bf 01/13/22} & Course introduction and overview; introduction to Ghidra\\
+\hline
+{\bf Online} & ARM ISA; ARM disassembly and code analysis\\
+\hline
+{\bf 01/20/22} & Identifying standard library functions: manual and automated techniques\\
+\hline
+{\bf 01/27/22} & ELFs; RE hints from linking and loading\\
+\hline
+{\bf 02/03/22} & Embedded Linux systems hardware/software architecture; \\
+& analyzing filesystem images; reverse engineering using operating system abstractions\\
+\hline
+{\bf 02/10/22} & Dynamic analysis of embedded Linux systems; emulation\\
+\hline
+{\bf 02/17/22} & AVR architecture and ISA; AVR disassembly\\
+\hline
+{\bf 02/24/22} & AVR I/O interfaces; automating interaction with I/O interfaces\\
+\hline
+{\bf 03/03/22} & Microcontroller emulation\\
+\hline
+{\bf 03/10/22} & Serial protocols and interfaces: discovery and interaction\\
+\hline
+{\bf 03/24/22} & JTAG; interacting with debug access ports\\
+\hline
+{\bf 03/31/22} & STM32F4 architecture; analyzing object-oriented code\\
+\hline
+{\bf 04/07/22} & Firmware update files\\
+\hline
+{\bf 04/14/22} & Advanced analysis and RE approaches\\
+\hline
+{\bf 04/21/22} & Security threats and evaluation techniques\\
+\hline
+{\bf 04/28/22} & ENGR-E 599 student presentations: embedded systems RE case studies\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Prerequisites}
+
+While there are no official prerequisites, students will benefit from some
+familiarity with:
+\begin{itemize}
+\item electronics
+\item programming in C and Python
+\item assembly language in at least one architecture
+\item microcontroller or bare-metal microprocessor programming
+\item operating systems
+\end{itemize}
+Background in these areas will be provided as needed for the assignments. If a
+student needs more background information in a particular topic area than is
+provided during lecture,  they should inform the instructor so that additional
+resources or instruction can be provided.
+
+\section{Textbooks}
+
+This course has no official textbook. Some generally useful references are
+listed below. References relevant to particular topic areas will be presented
+during class.
+
+{\bf Practical Reverse Engineering: x86, x64, ARM, Windows Kernel, Reversing
+Tools, and Obfuscation}\\
+Bruce Dang, Alexandre Gazet, Elias Bachaalany, and S\'{e}bastian Josse\\
+John Wiley \& Sons\\
+ISBN-13: 978-1-118-78731-1\\
+\url{https://iu.skillport.com/skillportfe/main.action?assetid=62680}
+
+{\bf Reverse Engineering for Beginners}\\
+Dennis Yurichev\\
+Self-published\\
+\url{https://beginners.re/}
+
+{\bf Hacking the Xbox: An Introduction to Reverse Engineering}\\
+Andrew ``bunnie'' Huang\\
+No Starch Press\\
+ISBN-13: 978-1-59327-029-2\\
+\url{https://bunniefoo.com/nostarch/HackingTheXbox_Free.pdf}
+
+{\bf The Ghidra Book}\\
+Chris Eagle\\
+No Starch Press\\
+ISBN-13: 978-1-71850-102-7
+
+{\bf The IDA Pro Book}\\
+Chris Eagle\\
+No Starch Press\\
+ISBN-13: 978-1-59327-289-0\\
+\url{https://iu.skillport.com/skillportfe/main.action?assetid=43616}
+
+{\bf Practical IoT Hacking}\\
+Fotios Chantzis, Ioannis Stais, Paulino Calderon, Evangelos Deirmentzoglou, and Beau Woods\\
+No Starch Press\\
+ISBN-13: 978-1-71850-090-7\\
+
+\section{Lectures}
+
+Lectures will be recorded for later viewing. Lecture materials, including
+slides and any other resources used during the lecture, will be shared in a
+course git repository.
+
+\section{Assignments}
+
+Assignment submissions should include a written description of the techniques
+that the student used to complete the assignment and the details that were
+learned through the analysis.  Assignment submissions may either be flat text
+files or PDFs. Some assignments may also require the submission of supporting
+artifacts, such as analysis files from the disassembler or source code for programs
+that were written to interact with a system.
+
+Late portions of an assignment will be accepted, but the points awarded for any
+late portions will be reduced by 50\%. Even if an assignment is incomplete,
+students are strongly encouraged to submit whatever they have completed by the
+due date in order to maximize the awarded points.
+
+\section{Policy on working together}
+
+Cooperation on the assignments is accepted and encouraged. Any collaborators
+must be acknowledged on assignment submissions, and assignment reports and
+source code must be written independently. {\bf Duplication of another
+student’s work is not permitted, and will result in a score of zero points for
+the assignment.}
+
+\section{Hardware}
+
+Students will be provided with hardware to support some of the assignments.
+Students should plan to return the hardware kits by the date of the final
+class.
+
+\section{Class participation}
+
+Class participation accounts for a small fraction of the final score. Students
+can show their continued engagement with the course material in a variety of
+ways, such as by attending lectures, participating in discussions, attending
+office hours, or corresponding with the instructor about assignments or course
+topics.
+
+For students in the ENGR-E 599 version of the course, full participation will
+also include the delivery of a 10-15 minute presentation on an embedded systems
+reverse engineering topic of the student's choice during the final class
+period. This could be a summary of a research paper, details of a project found
+online, or a description of a project undertaken by the student outside the
+course. More information about the presentations will be provided mid-way
+through the semester. If students would like help choosing a topic for
+presentation, they are encouraged to contact the instructor.
+
+\section{Grading}
+
+Grading will be calculated from a combination of assignment grades and class
+participation. There are no exams.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|}
+\hline
+{\bf Assignments} & {\bf Participation} \\
+\hline
+95\% & 5\% \\
+\hline
+\end{tabular}
+\end{center}
+
+In the event that alterations to the course plan require changes to this
+weighting, any changes will be communicated on Canvas.
+
+The cutoffs for assigning letter grades are as follows:
+
+\begin{center}
+\begin{tabular}{l|l}
+\hline
+{\bf Percentage} & {\bf Letter grade} \\
+\hline
+93\% & A \\
+90\% & A- \\
+87\% & B+ \\
+83\% & B \\
+80\% & B- \\
+77\% & C+ \\
+73\% & C \\
+70\% & C- \\
+67\% & D+ \\
+63\% & D \\
+60\% & D- \\
+$<$60\% & F \\
+\hline
+\end{tabular}
+\end{center}
+The instructor reserves the right to decrease the grade cutoffs during the
+course. In other words, the scale above represents the \emph{minimum} letter
+grade that will be assigned, and the instructor may choose to restructure the
+scale to assign better grades at their discretion. Any changes to the grading
+scale will be communicated with a post to the course Canvas site.
+
+Grades of A+ will be assigned for extraordinary achievement during the course.
+
+\section{Communications}
+
+Official announcements, course materials, and descriptions of labs and
+assignments will be posted to Canvas. Students will also submit their
+assignments on Canvas.
+
+If a collaborative discussion forum (a Slack workspace, for example) would be
+of interest to the class, one may be established with details for joining
+posted to Canvas.
+
+Please e-mail the instructor for any discussions related to personal matters,
+grades, or course administration.
+
+\section{Disability services for students}
+
+If a student needs an accommodation for a disability, they should inform the
+instructor during the first three weeks of the semester. Some aspects of this
+course may be modified to facilitate the student's participation and progress.
+Once the instructor is aware of a student's needs, they can work with the
+Office of Disability Services for Students (DSS) to help determine appropriate
+academic accommodations. Any information that a student provides is private and
+confidential.
+
+\end{document}
+

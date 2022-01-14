@@ -14,6 +14,8 @@ Canvas
 Lecture videos
 --------------
 
+[Lecture 1](https://www.youtube.com/watch?v=APsxoXaLxc0)
+
 Syllabus
 --------
 

@@ -15,6 +15,7 @@ Lecture videos
 --------------
 
 [Lecture 1](https://www.youtube.com/watch?v=APsxoXaLxc0)
+
 [Lecture 1.5](https://www.youtube.com/watch?v=AvISKjk-R68)
 
 Syllabus

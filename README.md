@@ -18,6 +18,8 @@ Lecture videos
 
 [Lecture 1.5](https://www.youtube.com/watch?v=AvISKjk-R68)
 
+[Lecture 2](https://www.youtube.com/watch?v=-scogzpgMrU)
+
 Syllabus
 --------
 

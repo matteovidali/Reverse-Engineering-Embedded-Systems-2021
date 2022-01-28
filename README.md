@@ -20,6 +20,8 @@ Lecture videos
 
 [Lecture 2](https://www.youtube.com/watch?v=-scogzpgMrU)
 
+[Lecture 3](https://www.youtube.com/watch?v=KRzeJ8JzuEg)
+
 Syllabus
 --------
 

@@ -22,6 +22,8 @@ Lecture videos
 
 [Lecture 3](https://www.youtube.com/watch?v=KRzeJ8JzuEg)
 
+[Lecture 4](https://www.youtube.com/watch?v=NftOYdITDZ4)
+
 Syllabus
 --------
 

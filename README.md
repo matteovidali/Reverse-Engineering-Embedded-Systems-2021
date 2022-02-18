@@ -26,6 +26,8 @@ Lecture videos
 
 [Lecture 5](https://www.youtube.com/watch?v=YZMDZrSob10)
 
+[Lecture 6](https://www.youtube.com/watch?v=zha14d-q7l8)
+
 Syllabus
 --------
 

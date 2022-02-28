@@ -30,6 +30,8 @@ Lecture videos
 
 [Lecture 7](https://www.youtube.com/watch?v=Wta2sCHiF8w)
 
+[Lecture 8](https://www.youtube.com/watch?v=Aq83cp74bPU)
+
 Syllabus
 --------
 

@@ -34,6 +34,8 @@ Lecture videos
 
 [Lecture 9](https://www.youtube.com/watch?v=cxxtn9xLdCo)
 
+[Lecture 10](https://www.youtube.com/watch?v=R83QuVHomno)
+
 Syllabus
 --------
 

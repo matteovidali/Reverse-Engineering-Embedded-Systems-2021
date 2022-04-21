@@ -42,6 +42,8 @@ Lecture videos
 
 [Lecture 13](https://www.youtube.com/watch?v=u7fng9oFl-k)
 
+[Lecture 14](https://www.youtube.com/watch?v=aMhSxHGmqng)
+
 Syllabus
 --------
 
